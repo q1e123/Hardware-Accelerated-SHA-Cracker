@@ -1,5 +1,4 @@
 from utils import get_lines_from_file
-from crypto import get_sha256
 
 class Cracker():
     def __init__(self, wordlist_path, hash_function) -> None:
@@ -11,7 +10,7 @@ class Cracker():
     def get_rainbow_table(self):
         rainbow_table = {}
         for word in self.word_list:
-            hash = get_sha256(word)
+            hash = self.hash_function(word)
             rainbow_table[hash] = word
         return rainbow_table
 
@@ -23,4 +22,4 @@ class Cracker():
                 result_map[hash] = self.rainbow_table[hash]
             else:
                 result_map[hash] = None
-        
+        return result_map
