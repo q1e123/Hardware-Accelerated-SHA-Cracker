@@ -12,7 +12,7 @@ def get_random_string(length):
     result = ''.join(random.choice(dictionary) for i in range(length))
     return result
 
-password_list = utils.get_lines_from_file('1000-most-common-passwords.txt')
+password_list = utils.get_lines_from_file(r'../src/rockyou.txt')[:10000]
 with open('demo-hashes', 'w+') as file:
     for password in password_list:
         sha = get_sha256(password)
