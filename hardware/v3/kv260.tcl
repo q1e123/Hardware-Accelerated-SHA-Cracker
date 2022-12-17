@@ -205,6 +205,7 @@ proc create_root_design { parentCell } {
    CONFIG.c_include_sg {0} \
    CONFIG.c_m_axis_mm2s_tdata_width {8} \
    CONFIG.c_sg_include_stscntrl_strm {0} \
+   CONFIG.c_sg_length_width {26} \
  ] $axi_dma_end_len
 
   # Create instance: axi_dma_hash, and set properties
@@ -216,6 +217,7 @@ proc create_root_design { parentCell } {
    CONFIG.c_s2mm_burst_size {128} \
    CONFIG.c_s_axis_s2mm_tdata_width {256} \
    CONFIG.c_sg_include_stscntrl_strm {0} \
+   CONFIG.c_sg_length_width {26} \
  ] $axi_dma_hash
 
   # Create instance: axi_dma_len, and set properties
@@ -227,6 +229,7 @@ proc create_root_design { parentCell } {
    CONFIG.c_m_axis_mm2s_tdata_width {64} \
    CONFIG.c_mm2s_burst_size {8} \
    CONFIG.c_sg_include_stscntrl_strm {0} \
+   CONFIG.c_sg_length_width {26} \
  ] $axi_dma_len
 
   # Create instance: axi_dma_msg, and set properties
