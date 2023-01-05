@@ -24,8 +24,8 @@ if __name__ == '__main__':
     for i in range(15):
         print(len(arr), end=',')
 
-        for t in range(8):
-            c = int(len(arr) / t) + 1
+        for t in range(16):
+            c = int(len(arr) / (t+1)) + 1
 
             with ThreadPoolExecutor(max_workers=t + 1) as executor:
                 start_time = time.time()
